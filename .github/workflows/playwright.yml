@@ -23,5 +23,7 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npx playwright test
-      - uses: case-overview.spec.ts
+      - uses: actions/checkout@v1
+      - name: My first step
+      - uses: ./.github/workflows/case-overview.spec.ts
         
