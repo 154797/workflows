@@ -23,5 +23,5 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npx playwright test
-      - uses: workflows/case-overview.spec.ts
+      - uses: .github/workflows/case-overview.spec.ts
         
