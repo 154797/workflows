@@ -1,29 +1,18 @@
-name: Playwright Tests
+name: Mijn Workflow
+
 on:
   push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
-jobs:
-  test:
-    timeout-minutes: 60
+    branches:
+    - main
+jobs: 
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install packages
-        run: npm install --package-lock-only     
-      - name: Install dependencies
-        run: npm ci
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-      - name: Run Playwright tests
-        run: npx playwright test
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
+      - name: Checkout-repository
+        uses: actions/checkout@v2
+        
+      - name: Voer script uit
+        run: |
+          # Hier komt je scipt
+          echo "Hello, Github Actions!"
