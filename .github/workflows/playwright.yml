@@ -25,5 +25,5 @@ jobs:
         run: npx playwright test
       - uses: actions/checkout@v1
       - name: My first step
-        uses: ./.github/workflows/case-overview.spec.ts
+        uses: ./.github/workflows/playwright-testcode.spec.ts
         
