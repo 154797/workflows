@@ -1,7 +1,3 @@
-import { Chance } from 'chance';
-import { ExamUtils } from '../page-models/test';
-import { appSettings } from '../app-settings';
-
 const chance = new Chance();
 
 test.describe('case management', async () => {
