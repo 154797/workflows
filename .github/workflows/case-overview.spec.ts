@@ -1,7 +1,7 @@
 import test, { expect } from '@playwright/test';
-import { Chance } from '@playwright/test';
-import { ExamUtils } from '@playwright/test';
-import { appSettings } from '@playwright/test';
+import { Chance } from 'chance';
+import { ExamUtils } from '.github/workflows/test.ts';
+import { appSettings } from '.github/workflows/app-settings.ts';
 
 const chance = new Chance();
 
