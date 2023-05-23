@@ -1,7 +1,7 @@
 import test, { expect } from '@playwright/test';
-import { Chance } from 'chance';
-import { ExamUtils } from '../page-models/test';
-import { appSettings } from '../app-settings';
+import { Chance } from '@playwright/test';
+import { ExamUtils } from '@playwright/test';
+import { appSettings } from '@playwright/test';
 
 const chance = new Chance();
 
