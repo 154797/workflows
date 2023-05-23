@@ -15,6 +15,13 @@ jobs:
           node-version: 18
       - name: Find package-lock
         run: npm i find-package-json
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm install
       - name: Install ci
@@ -29,5 +36,3 @@ jobs:
         run: npm i -D @types/node @types/jest
       - name: Run Playwright tests
         run: npx playwright test
-     
-        
