@@ -19,6 +19,8 @@ jobs:
         run: npm install
       - name: Install ci
         run: npm ci
+      - name: Install npm chance
+        run: npm install chance
       - name: Install Playwright test
         run: npm install --D @playwright/test
       - name: Install Playwright Browsers
