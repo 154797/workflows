@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { Chance } from '.github/workflows/chance';
+import { Chance } from '.github/workflows/chance/index.d.ts';
 import { ExamUtils } from '../page-models/test';
 import { appSettings } from '../app-settings';
 
