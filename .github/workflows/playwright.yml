@@ -27,7 +27,7 @@ jobs:
       - name: Install ci
         run: npm ci
       - name: Install npm chance
-        run: npm i chance
+        run: npm install --save @types/chance
       - name: Install Playwright test
         run: npm install --D @playwright/test
       - name: Install Playwright Browsers
